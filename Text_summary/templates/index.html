@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/design.css') }}">
+</head>
+
+<body>
+    
+    <form action="{{url_for('searchr')}}" method="POST">
+        <div class="container">
+            <h2 style="text-transform: uppercase;">Text summary Forum</h2>
+            <textarea name="text">{{query}}</textarea>
+            <textarea name="text_a" class="ttx">{{results}}</textarea>
+            
+          </div>
+          <input name="query" type="submit" value="Summary" class="bar" required style="margin-left: 297px;margin-top: -50px;position: relative;top: -130px;font-size: 10px;background-color: rgb(239, 188, 22);height: 20px;">
+    </form>
+</body>
+</html>
